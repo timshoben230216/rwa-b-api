@@ -1,0 +1,64 @@
+:root {
+  --bg: #0a0e13;
+  --panel: #10161d;
+  --panel-raised: #151d26;
+  --border: #1f2933;
+  --border-soft: #182029;
+  --text: #dfe6ec;
+  --text-dim: #8b98a5;
+  --text-faint: #5b6773;
+
+  --accent-normal: #4fd1c5;   /* signal cyan — normal traffic */
+  --accent-flag: #f5a623;     /* amber — vps/vm/proxy/bot */
+  --accent-block: #f0506e;    /* red — blocked */
+  --accent-tool: #8b7cf6;     /* violet — postman/python/curl/etc */
+
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --radius: 6px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(79, 209, 197, 0.05), transparent 40%),
+    radial-gradient(circle at 85% 20%, rgba(139, 124, 246, 0.04), transparent 40%);
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: rgba(79, 209, 197, 0.25);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-normal);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
